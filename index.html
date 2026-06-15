@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adje Solutions | Executive Coaching & Leadership Development for International Professionals</title>
+  <meta name="description" content="Adje Solutions helps internationally minded professionals navigate career transitions, get promoted, and build real influence through executive coaching, leadership facilitation, and parenting guidance.">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Adje Solutions | Executive Coaching & Leadership Development">
+  <meta property="og:description" content="Helping international professionals succeed at work and life through executive coaching, leadership facilitation, and parenting guidance.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.adjesolutions.com/">
+  <meta property="og:image" content="https://www.adjesolutions.com/assets/og-image.jpg">
+  <meta property="og:site_name" content="Adje Solutions">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Main JS -->
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- ============================================
+       TOP NEWSLETTER BAR
+  ============================================= -->
+  <div class="newsletter-bar" id="newsletter-bar">
+    <div class="container newsletter-bar__container">
+      <div class="newsletter-bar__left">
+        <p class="newsletter-bar__text">Subscribe to the Adje Solutions Newsletter</p>
+        <a href="#footer-newsletter" class="newsletter-bar__btn">Subscribe</a>
+      </div>
+      <div class="newsletter-bar__right">
+        <p class="newsletter-bar__text">Free Promotion Unicorn™ Report</p>
+        <a href="#" class="newsletter-bar__btn" id="openLeadModalBar">Get It Now</a>
+      </div>
+      <button class="newsletter-bar__close" aria-label="Close">&times;</button>
+    </div>
+  </div>
+
+  <!-- ============================================
+       HEADER & NAVIGATION
+  ============================================= -->
+  <header class="header" id="header">
+    <div class="container">
+
+      <!-- Logo -->
+      <a href="index.html" class="header__logo">
+        <img src="assets/logo.svg" alt="Adje Solutions">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <ul class="nav__list" id="navLinks">
+          <li>
+            <a href="index.html" class="nav__link is-active">Home</a>
+          </li>
+          <li>
+            <a href="about.html" class="nav__link">About</a>
+          </li>
+          <li class="nav__item nav__item--dropdown">
+            <a href="#" class="nav__link" aria-haspopup="true" aria-expanded="false">
+              Services
+              <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <ul class="nav__dropdown">
+              <li><a href="coaching.html" class="nav__dropdown-link">1:1 Coaching</a></li>
+              <li><a href="group-coaching.html" class="nav__dropdown-link">Group Coaching</a></li>
+              <li><a href="doula.html" class="nav__dropdown-link">Doula Services</a></li>
+              <li><a href="parenting.html" class="nav__dropdown-link">Parenting Coaching</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="blog.html" class="nav__link">Blog</a>
+          </li>
+          <li>
+            <a href="contact.html" class="nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Hamburger -->
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav" aria-hidden="true">
+    <ul class="mobile-nav__list">
+      <li><a href="index.html" class="mobile-nav__link is-active">Home</a></li>
+      <li><a href="about.html" class="mobile-nav__link">About</a></li>
+      <li><a href="coaching.html" class="mobile-nav__link">1:1 Coaching</a></li>
+      <li><a href="group-coaching.html" class="mobile-nav__link">Group Coaching</a></li>
+      <li><a href="doula.html" class="mobile-nav__link">Doula Services</a></li>
+      <li><a href="parenting.html" class="mobile-nav__link">Parenting Coaching</a></li>
+      <li><a href="blog.html" class="mobile-nav__link">Blog</a></li>
+      <li><a href="contact.html" class="mobile-nav__link">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn--primary mobile-nav__cta">Book a Call</a>
+  </div>
+
+  <!-- ============================================
+       HERO SECTION
+  ============================================= -->
+  <section class="hero" id="hero">
+    <div class="container hero__content">
+      <h1 class="hero__title">Helping International Professionals Succeed at Work and Life</h1>
+      <p class="hero__subtitle">Executive coaching, group facilitation, and parenting support for globally minded professionals navigating career transitions and family life.</p>
+      <div class="hero__actions">
+        <a href="contact.html" class="btn btn--primary">Book a Free Consultation</a>
+        <a href="#" class="btn btn--secondary" id="openLeadModal">Free Promotion Unicorn™ Report</a>
+      </div>
+    </div>
+    <div class="hero__scroll-indicator" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </section>
+
+  <!-- ============================================
+       WELCOME / INTRO SECTION
+  ============================================= -->
+  <section class="welcome fade-in" id="welcome">
+    <div class="container welcome__grid">
+      <div class="welcome__content">
+        <span class="welcome__eyebrow">WELCOME TO ADJE SOLUTIONS</span>
+        <h2>Hi, I'm Yikee!</h2>
+        <p>Welcome! I'm Yikee and I'm so glad you are here! I help globally minded professionals navigate career transitions, get promoted, and build real influence without sacrificing their family or well-being.</p>
+
+        <p>I have spent nearly two decades internationally working for nonprofits and the United States government, 15+ of those years in Francophone Africa. I've negotiated multimillion dollar deals, managed over $1 billion portfolios, worked in 14 countries, and achieved organizational efficiency in 200+ person organizations. All this while being a devoted wife and active mother of five children (ages 3 to 14).</p>
+
+        <p>I published <a href="https://www.amazon.com/DIPLOMATICALLY-Creating-Work-Life-Balance-Foreign-ebook/dp/B0CN52ZV9L" target="_blank" rel="noopener noreferrer">DIPLOMATICALLY: A Guide for Creating Work-life Balance in the Foreign Service</a> (2024 Amazon bestseller and ranked #2 on BookAuthority) to help professionals achieve their personal priorities in the workplace, and <a href="https://www.amazon.com/dp/B0H59K9XMZ" target="_blank" rel="noopener noreferrer"><em>DIPLOMATICALLY 2: Django Parenting, A Guide for Raising Resilient Third-Culture Children</em></a> to help parents better prepare their children for this unpredictable world. I want to help you succeed in your work and your life. The services I provide include 1:1 leadership coaching, group coaching, facilitation for workshops and retreats aimed at organizational improvement, doula services, and parenting coaching. What can I do for YOU? Let's explore together.</p>
+
+        <a href="about.html" class="btn btn--primary">Learn More About Me</a>
+      </div>
+      <div class="welcome__image">
+        <img src="assets/headshot.png" alt="Yikee Adje, Founder of Adje Solutions" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SERVICES SECTION
+  ============================================= -->
+  <section class="services fade-in" id="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>How I Can Help You</h2>
+      </div>
+      <div class="services__grid">
+
+        <!-- Service Card: 1:1 Leadership Coaching -->
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="24" cy="14" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
+              <path d="M8 42c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M24 4l1.76 3.57 3.94.57-2.85 2.78.67 3.93L24 12.94l-3.52 1.91.67-3.93-2.85-2.78 3.94-.57L24 4z" fill="currentColor" opacity="0.3"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">1:1 Leadership Coaching</h3>
+          <p class="service-card__description">Navigate career transitions, get promoted, and build influence with personalized coaching from someone who's been there.</p>
+          <a href="coaching.html" class="service-card__link">Learn More &rarr;</a>
+        </div>
+
+        <!-- Service Card: Group Coaching & Facilitation -->
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="16" cy="16" r="6" stroke="currentColor" stroke-width="2" fill="none"/>
+              <circle cx="32" cy="16" r="6" stroke="currentColor" stroke-width="2" fill="none"/>
+              <circle cx="24" cy="20" r="6" stroke="currentColor" stroke-width="2" fill="none" opacity="0.3"/>
+              <path d="M4 40c0-6.627 5.373-12 12-12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M44 40c0-6.627-5.373-12-12-12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M12 44c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.5"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Group Coaching &amp; Facilitation</h3>
+          <p class="service-card__description">Practical retreats and workshops that eliminate bottlenecks and boost team performance. No fuzzy ice breakers.</p>
+          <a href="group-coaching.html" class="service-card__link">Learn More &rarr;</a>
+        </div>
+
+        <!-- Service Card: Doula Services -->
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M24 42s-16-9.33-16-21a10 10 0 0 1 16-8 10 10 0 0 1 16 8c0 11.67-16 21-16 21z" stroke="currentColor" stroke-width="2" fill="none"/>
+              <circle cx="24" cy="24" r="5" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.4"/>
+              <path d="M22 23c0-1.1.9-2 2-2s2 .9 2 2" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.4"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Doula Services</h3>
+          <p class="service-card__description">Prepare mentally and practically for the miracle of birth with a mother of five who loves every moment of the journey.</p>
+          <a href="doula.html" class="service-card__link">Learn More &rarr;</a>
+        </div>
+
+        <!-- Service Card: Parenting Coaching -->
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="18" cy="12" r="6" stroke="currentColor" stroke-width="2" fill="none"/>
+              <path d="M6 38c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <circle cx="34" cy="18" r="4" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.5"/>
+              <path d="M26 40c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Parenting Coaching</h3>
+          <p class="service-card__description">Raise resilient, hardworking children prepared for any challenge using the 23 Django Parenting for Resilience Principles™.</p>
+          <a href="parenting.html" class="service-card__link">Learn More &rarr;</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       TESTIMONIALS SECTION
+  ============================================= -->
+  <section class="testimonials fade-in" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <h2>What My Clients Say</h2>
+      </div>
+
+      <div class="testimonials__carousel testimonial-slider" id="testimonialSlider" aria-label="Testimonials">
+        <div class="testimonials__track">
+
+          <!-- Testimonial 1 -->
+          <div class="testimonials__slide testimonial-slide active" data-index="0" aria-hidden="false">
+            <div class="testimonial-card">
+              <span class="testimonial-card__quote-mark">&ldquo;</span>
+              <p class="testimonial-card__text">The job market was brutally lean and competitive, and my confidence was not where it needed to be to land my next opportunity. Yikee helped me get clear on how to package my expertise and tell my story in a way that actually reflects the value I bring. She also coached me through the interview in a way that felt less like drilling and more like unlocking something that was already there. And when it came time to negotiate, she gave me the tools and the nerve to ask for what I was worth and hold the line. The result? A Director role abroad and a 36% salary increase. In this crazy market!</p>
+              <div class="testimonial-card__author">
+                <div>
+                  <p class="testimonial-card__name">Mieko M.</p>
+                  <p class="testimonial-card__role">Strategy and Programs Executive, Washington D.C., 2026</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonials__slide testimonial-slide" data-index="1" aria-hidden="true">
+            <div class="testimonial-card">
+              <span class="testimonial-card__quote-mark">&ldquo;</span>
+              <p class="testimonial-card__text">Yikee is one of the most effective and respected leaders I've encountered. She brings together strategic thinking, diplomacy, and genuine people-centered leadership in a way that is rare&mdash;especially in complex, high-pressure environments like the DRC.</p>
+              <div class="testimonial-card__author">
+                <div>
+                  <p class="testimonial-card__name">Michael M.</p>
+                  <p class="testimonial-card__role">Former U.S. Diplomat, Democratic Republic of the Congo, 2026</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonials__slide testimonial-slide" data-index="2" aria-hidden="true">
+            <div class="testimonial-card">
+              <span class="testimonial-card__quote-mark">&ldquo;</span>
+              <p class="testimonial-card__text">Working with Yikee during a challenging career transition was a turning point. She helped me sharpen my narrative, prepare confidently for interviews, and rebuild my professional confidence. I'm incredibly grateful for Yikee's support and would highly recommend her to anyone seeking a career coach who is insightful, grounded, and genuinely invested in her clients' success.</p>
+              <div class="testimonial-card__author">
+                <div>
+                  <p class="testimonial-card__name">Rashida K.</p>
+                  <p class="testimonial-card__role">Senior Program Manager, Texas, 2026</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Carousel Controls -->
+        <div class="testimonials__controls">
+          <button class="testimonials__btn prev-btn" id="prevTestimonial" aria-label="Previous testimonial">&#8592;</button>
+          <div class="testimonials__dots testimonial-dots" id="testimonialDots"></div>
+          <button class="testimonials__btn next-btn" id="nextTestimonial" aria-label="Next testimonial">&#8594;</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       LEAD MAGNET SECTION
+  ============================================= -->
+  <section class="lead-magnet fade-in" id="free-resource">
+    <div class="container">
+      <div class="lead-magnet__box download-gate" data-resource="promotion-unicorn">
+        <div class="lead-magnet__content">
+          <h2 class="lead-magnet__title">Get Your Free Promotion Unicorn Report</h2>
+          <p class="lead-magnet__subtitle">I conducted independent research on fast rising Foreign Service Officers who I refer to as "Promotion Unicorns". I capture their lessons learned and what they believe made the difference, and you may be surprised by their responses. This study contains useful information for all professionals who want to get promoted.</p>
+          <form class="lead-magnet__form" id="leadMagnetForm">
+            <label for="leadMagnetEmail" class="visually-hidden">Email address</label>
+            <input type="email" id="leadMagnetEmail" name="email" placeholder="Enter your email address" required class="lead-magnet__input">
+            <button type="submit" class="btn btn--primary">Send Me the Report</button>
+            <p class="lead-magnet__disclaimer">Enter your email to receive the free report. We respect your privacy.</p>
+          </form>
+        </div>
+        <div class="download-area" style="display: none;">
+          <p>Thank you! Click below to download your report:</p>
+          <a href="assets/promotion-unicorn-report.pdf" class="btn btn--primary" download>Download the Promotion Unicorn Report</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       BLOG PREVIEW SECTION
+  ============================================= -->
+  <section class="blog-preview fade-in" id="blog">
+    <div class="container">
+      <div class="section-header">
+        <h2>From the Blog</h2>
+      </div>
+      <p class="blog-preview__subtitle">For high achieving international professionals who want to climb the ladder without compromising their personal priorities.</p>
+
+      <div class="blog-preview__grid">
+
+        <!-- Column 1: Executive Coaching Corner -->
+        <div class="blog-column">
+          <h3 class="blog-column__heading">Executive Coaching Corner</h3>
+          <ul class="blog-preview__list">
+            <li><a href="blog.html">My Work-Life Balance Manifesto: The 3Cs Approach to Living Your Purpose</a></li>
+            <li><a href="blog.html">How to Position Yourself for Promotion Without Self-Promoting</a></li>
+            <li><a href="blog.html">The Art of Negotiating Your Worth in a New Role</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Django Parenting for Resilience -->
+        <div class="blog-column">
+          <h3 class="blog-column__heading">Django Parenting for Resilience</h3>
+          <ul class="blog-preview__list">
+            <li><a href="blog.html">Django Parenting: Tough Love Prepares Children Better for an Unpredictable World</a></li>
+            <li><a href="blog.html">Building Grit in Children: Lessons from the Django Framework</a></li>
+            <li><a href="blog.html">When Your Kids Have Lived in More Countries Than Most Adults</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: A Bit of Faith and Inspiration -->
+        <div class="blog-column">
+          <h3 class="blog-column__heading">A Bit of Faith and Inspiration</h3>
+          <ul class="blog-preview__list">
+            <li><a href="blog.html">Counting the Blessings: After Fleeing Political Violence in the DRC to Face the Closure of USAID - I Am Still Grateful</a></li>
+            <li><a href="blog.html">Grace Under Pressure: Leading with Faith in Uncertain Times</a></li>
+            <li><a href="blog.html">The Power of Showing Up Fully in Work and Life</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="blog-preview__cta">
+        <a href="blog.html" class="btn btn--primary">Visit the Blog</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+  ============================================= -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Brand Column -->
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">Adje <span>Solutions</span></a>
+          <p class="footer__motto">Helping international professionals succeed at work and life.</p>
+          <p class="footer__description">Executive coaching, leadership facilitation, and parenting guidance for globally minded professionals.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer__column">
+          <h4>Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer__column">
+          <h4>Services</h4>
+          <ul class="footer__links">
+            <li><a href="coaching.html">1:1 Coaching</a></li>
+            <li><a href="group-coaching.html">Group Coaching</a></li>
+            <li><a href="doula.html">Doula Services</a></li>
+            <li><a href="parenting.html">Parenting Coaching</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer__newsletter" id="footer-newsletter">
+          <h4>Subscribe to the Adje Solutions Newsletter</h4>
+          <form class="footer__newsletter-form newsletter-form" id="footerNewsletterForm" aria-label="Newsletter signup">
+            <label for="footerNewsletterEmail" class="visually-hidden">Email address</label>
+            <input type="email" id="footerNewsletterEmail" name="email" placeholder="Your email address" required class="footer__newsletter-input">
+            <button type="submit" class="btn btn--primary btn--sm">Subscribe</button>
+          </form>
+          <p class="footer__email">
+            <a href="mailto:yikee@adjesolutions.com">yikee@adjesolutions.com</a>
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer__bottom">
+        <p>&copy; 2025 Adje Solutions. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       LEAD MAGNET MODAL
+  ============================================= -->
+  <div class="modal-overlay lead-modal" id="leadModal" role="dialog" aria-modal="true" aria-labelledby="modalHeading" aria-hidden="true">
+    <div class="modal">
+      <button class="modal__close modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+
+      <div class="modal__header">
+        <h2 id="modalHeading">Get Your Free Promotion Unicorn Report!</h2>
+        <p>Discover the career strategies used by fast-rising Foreign Service Officers who achieved remarkable promotions. This independent research captures their lessons learned and what truly made the difference.</p>
+      </div>
+
+      <div class="modal__body">
+        <form class="modal__form" id="modalLeadForm">
+          <div class="form-group">
+            <label for="modalEmail">Email Address</label>
+            <input type="email" id="modalEmail" name="email" class="form-input" placeholder="Enter your email address" required>
+          </div>
+
+          <button type="submit" class="btn btn--primary" style="width: 100%;">Get the Free Report</button>
+
+          <p class="modal__disclaimer">We respect your privacy. Unsubscribe at any time.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

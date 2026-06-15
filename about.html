@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Yikee | Adje Solutions</title>
+  <meta name="description" content="Meet Yikee Adje - Executive Coach, Amazon Bestselling Author, Master Facilitator, Certified Doula, and Mom of Five. Nearly two decades of international leadership experience.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Main JS -->
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- ============================================================
+       TOP NEWSLETTER BAR
+       ============================================================ -->
+  <div class="newsletter-bar" id="newsletter-bar">
+    <div class="container">
+      <p class="newsletter-bar__text">
+        <strong>Free Resource:</strong> Download the Promotion Unicorn Report
+      </p>
+      <a href="#lead-modal" class="newsletter-bar__link">Get Your Copy</a>
+      <button class="newsletter-bar__close" aria-label="Close newsletter bar">&times;</button>
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+       HEADER & NAVIGATION
+       ============================================================ -->
+  <header class="header">
+    <div class="container">
+
+      <!-- Logo -->
+      <a href="index.html" class="header__logo">
+        <img src="assets/logo.svg" alt="Adje Solutions" width="280" height="60">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li>
+            <a href="index.html" class="nav__link">Home</a>
+          </li>
+          <li>
+            <a href="about.html" class="nav__link is-active" aria-current="page">About</a>
+          </li>
+          <li class="nav__item--dropdown">
+            <a href="#" class="nav__link">Services</a>
+            <ul class="nav__dropdown">
+              <li><a href="coaching.html" class="nav__dropdown-link">Executive Coaching</a></li>
+              <li><a href="group-coaching.html" class="nav__dropdown-link">Group Coaching and Facilitation</a></li>
+              <li><a href="doula.html" class="nav__dropdown-link">Doula Services</a></li>
+              <li><a href="parenting.html" class="nav__dropdown-link">Parenting Coaching</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="blog.html" class="nav__link">Blog</a>
+          </li>
+          <li>
+            <a href="contact.html" class="nav__link">Contact</a>
+          </li>
+        </ul>
+        <a href="contact.html" class="btn btn--primary btn--sm nav__cta">Book a Call</a>
+      </nav>
+
+      <!-- Mobile Hamburger -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+    </div>
+  </header>
+
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav" aria-hidden="true">
+    <ul class="mobile-nav__list">
+      <li><a href="index.html" class="mobile-nav__link">Home</a></li>
+      <li><a href="about.html" class="mobile-nav__link is-active">About</a></li>
+      <li><a href="coaching.html" class="mobile-nav__link">Executive Coaching</a></li>
+      <li><a href="group-coaching.html" class="mobile-nav__link">Group Coaching and Facilitation</a></li>
+      <li><a href="doula.html" class="mobile-nav__link">Doula Services</a></li>
+      <li><a href="parenting.html" class="mobile-nav__link">Parenting Coaching</a></li>
+      <li><a href="blog.html" class="mobile-nav__link">Blog</a></li>
+      <li><a href="contact.html" class="mobile-nav__link">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn--primary mobile-nav__cta">Book a Call</a>
+  </div>
+
+
+  <!-- ============================================================
+       1. PAGE HERO / ABOUT BANNER
+       ============================================================ -->
+  <section class="page-hero section--cream">
+    <div class="container text-center">
+      <h1 class="fade-in">About Yikee</h1>
+      <p class="hero__subtitle fade-in" style="color: var(--color-gray-500); max-width: 640px; margin: var(--space-md) auto 0;">
+        Coach. Author. Facilitator. Doula. Mom of Five.
+      </p>
+      <span class="accent-line fade-in" style="display: block; width: 60px; height: 3px; background-color: var(--color-accent); margin: var(--space-lg) auto 0; border-radius: 2px;"></span>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       2. ABOUT CONTENT SECTION (Image + Bio)
+       ============================================================ -->
+  <section class="about-content section">
+    <div class="container">
+      <div class="about-hero__grid">
+
+        <!-- Photos -->
+        <div class="about-hero__image fade-in-left">
+          <div style="display: flex; gap: 1rem;">
+            <img src="assets/yikee-about-1.jpg" alt="Yikee Adje in a green dress, eyes open" style="flex: 1; width: 50%; border-radius: 12px; object-fit: cover;">
+            <img src="assets/yikee-about-2.jpg" alt="Yikee Adje in a green dress, eyes closed" style="flex: 1; width: 50%; border-radius: 12px; object-fit: cover;">
+          </div>
+        </div>
+
+        <!-- Bio Text -->
+        <div class="about-bio__content fade-in-right">
+          <p>Hi, I'm Yikee (pronounced YEE-KEY). Lovely to 'meet' you!</p>
+
+          <p>Over the years as I've risen higher up in senior leadership, I get asked the same question over and over again, 'How do you do it all?' It's not common to see someone like me -- a first generation Chinese American, practicing Christian, devoted wife, and active mom of five -- in the rooms I'm in. It dawned on me one day that there is a method and way that I approach the world, and I want to share it to help others. So, I wrote and published <a href="https://www.amazon.com/DIPLOMATICALLY-Creating-Work-Life-Balance-Foreign-ebook/dp/B0CN52ZV9L">DIPLOMATICALLY: A Guide for Creating Work-life Balance in the Foreign Service</a> (2024 Amazon bestseller and ranked #2 on BookAuthority) to help international professionals in any field to maneuver their careers while keeping their personal priorities intact. Since becoming certified as an Executive Coach, Master Facilitator, and Doula in 2023, I've helped aspiring and senior leaders get ahead on their terms, guided overwhelmed and understaffed teams to work more efficiently to achieve higher performance, and helped soon-to-be parents discover the many joys of the birthing process.</p>
+
+          <p>Starting in 2026, I offer an additional service, Parenting Coaching. I often find myself asking a question that I suspect many other parents are asking too, 'How do I prepare my children for a future I can't even predict?' With shifting global politics, rapid AI advancement, and economic whiplash...it's tough out there. Taking lessons from my lived experience of constantly moving and raising five multicultural third-culture children across Africa and turning to my husband's generational 'tough love' wisdom and cultural practices from Benin (a little country in West Africa where he is from) I believe I have some answers to that question. Check out my second book titled <a href="https://www.amazon.com/dp/B0H59K9XMZ">DIPLOMATICALLY 2: Django Parenting, A Guide for Raising Resilient Third-Culture Children</a> where I share 23 Django Parenting for Resilience Principles&trade;.</p>
+
+          <p>Thank you for coming along for the ride, let us maneuver together through this crazy thing called life!</p>
+
+          <p>With love,</p>
+
+          <div style="margin-top: var(--space-md);">
+            <p style="font-family: var(--font-heading); font-size: var(--fs-xl); font-style: italic; color: var(--color-primary); margin-bottom: var(--space-xs);">Yikee Adje</p>
+            <p style="font-size: var(--fs-sm); font-weight: 600; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em;">Founder</p>
+            <p style="font-size: var(--fs-sm); font-weight: 600; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em;">Adje Solutions</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       3. CREDENTIALS / VALUES SECTION
+       ============================================================ -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Credentials &amp; Experience</h2>
+        <p class="section-subtitle">A career built on international impact, leadership, and service.</p>
+        <span class="accent-line"></span>
+      </div>
+
+      <div class="about-values stagger-children">
+        <div class="about-value-card fade-in">
+          <h4>Nearly 2 Decades International Experience</h4>
+          <p>Leading complex programs and teams across multiple continents and cultures.</p>
+        </div>
+        <div class="about-value-card fade-in">
+          <h4>15+ Years in Francophone Africa</h4>
+          <p>Deep expertise in navigating diverse cultural and professional landscapes.</p>
+        </div>
+        <div class="about-value-card fade-in">
+          <h4>Worked in 14 Countries</h4>
+          <p>Hands-on experience building partnerships and delivering results worldwide.</p>
+        </div>
+        <div class="about-value-card fade-in">
+          <h4>Managed $1B+ Portfolios</h4>
+          <p>Proven track record of high-stakes financial stewardship and strategic oversight.</p>
+        </div>
+        <div class="about-value-card fade-in">
+          <h4>Amazon Bestselling Author</h4>
+          <p>Author of DIPLOMATICALLY, a 2024 Amazon bestseller ranked #2 on BookAuthority.</p>
+        </div>
+        <div class="about-value-card fade-in">
+          <h4>ICF Executive Coach</h4>
+          <p>Certified executive coach helping leaders achieve clarity, confidence, and results.</p>
+        </div>
+        <div class="about-value-card fade-in">
+          <h4>Master Facilitator</h4>
+          <p>Guiding teams and organizations through strategic planning and high-performance collaboration.</p>
+        </div>
+        <div class="about-value-card fade-in">
+          <h4>Certified Doula</h4>
+          <p>Supporting soon-to-be parents through the transformative journey of childbirth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       4. TESTIMONIALS SECTION
+       ============================================================ -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>What People Are Saying</h2>
+        <p class="section-subtitle">Hear from the leaders and professionals Yikee has worked with.</p>
+        <span class="accent-line"></span>
+      </div>
+
+      <div class="testimonials__carousel testimonial-slider" aria-label="Testimonials">
+
+        <div class="testimonials__track">
+
+          <!-- Testimonial 1 -->
+          <div class="testimonials__slide testimonial-slide active" aria-hidden="false">
+            <div class="testimonial-card">
+              <span class="testimonial-card__quote-mark">&ldquo;</span>
+              <p class="testimonial-card__text">She navigates high-stakes situations with ease and brings people together in a way that builds trust, alignment, and results.</p>
+              <div class="testimonial-card__author">
+                <div>
+                  <p class="testimonial-card__name">Christine D.</p>
+                  <p class="testimonial-card__role">Former Deputy Mission Director, Democratic Republic of the Congo, 2026</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonials__slide testimonial-slide" aria-hidden="true">
+            <div class="testimonial-card">
+              <span class="testimonial-card__quote-mark">&ldquo;</span>
+              <p class="testimonial-card__text">Yikee is an outstanding leader who navigates difficult relationships with poise and diplomacy while maintaining team morale and performance.</p>
+              <div class="testimonial-card__author">
+                <div>
+                  <p class="testimonial-card__name">John D.</p>
+                  <p class="testimonial-card__role">Senior Executive, Democratic Republic of the Congo, 2026</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonials__slide testimonial-slide" aria-hidden="true">
+            <div class="testimonial-card">
+              <span class="testimonial-card__quote-mark">&ldquo;</span>
+              <p class="testimonial-card__text">Yikee is an outstanding coach who combines deep expertise with exceptional insight. Her guidance helped me gain clarity, structure my thinking, and identify actionable steps to achieve my goals. She asks the right questions, challenges assumptions, and provides practical, empowering advice that makes a real difference.</p>
+              <div class="testimonial-card__author">
+                <div>
+                  <p class="testimonial-card__name">Marie-Noel M.</p>
+                  <p class="testimonial-card__role">Executive Advisor, Senegal, 2025</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="testimonials__slide testimonial-slide" aria-hidden="true">
+            <div class="testimonial-card">
+              <span class="testimonial-card__quote-mark">&ldquo;</span>
+              <p class="testimonial-card__text">She helped me become a more strategic and self-aware leader. Her ability to help you identify root challenges and develop tailored solutions is truly exceptional.</p>
+              <div class="testimonial-card__author">
+                <div>
+                  <p class="testimonial-card__name">Kenana A.</p>
+                  <p class="testimonial-card__role">Development Expert, Jordan, 2025</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Carousel Controls -->
+        <div class="testimonials__controls">
+          <button class="testimonials__btn prev-btn" aria-label="Previous testimonial">&#8592;</button>
+          <div class="testimonials__dots testimonial-dots"></div>
+          <button class="testimonials__btn next-btn" aria-label="Next testimonial">&#8594;</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       5. CTA SECTION
+       ============================================================ -->
+  <section class="lead-magnet">
+    <div class="container">
+      <div class="lead-magnet__box">
+        <div class="lead-magnet__content fade-in">
+          <h2 class="lead-magnet__title">Ready to Get Started?</h2>
+          <p class="lead-magnet__subtitle">Whether you're looking for executive coaching, team facilitation, doula services, or parenting support, let's connect and explore how we can work together.</p>
+          <a href="contact.html" class="btn btn--white btn--lg">Contact Yikee</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Brand Column -->
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">Adje <span>Solutions</span></a>
+          <p>Empowering leaders and families to thrive across cultures, careers, and life's biggest transitions.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" aria-label="Amazon Author Page">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer__column">
+          <h4>Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer__column">
+          <h4>Services</h4>
+          <ul class="footer__links">
+            <li><a href="coaching.html">Executive Coaching</a></li>
+            <li><a href="group-coaching.html">Group Coaching and Facilitation</a></li>
+            <li><a href="doula.html">Doula Services</a></li>
+            <li><a href="parenting.html">Parenting Coaching</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer__newsletter">
+          <h4>Stay Connected</h4>
+          <p>Join the newsletter for leadership insights, parenting tips, and exclusive resources.</p>
+          <form class="footer__newsletter-form newsletter-form" aria-label="Newsletter signup">
+            <input type="email" name="email" class="footer__newsletter-input" placeholder="Your email address" required aria-label="Email address">
+            <button type="submit" class="btn btn--primary btn--sm">Join</button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer__bottom">
+        <p>&copy; 2026 Adje Solutions. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       LEAD MAGNET MODAL
+       ============================================================ -->
+  <div class="modal-overlay lead-modal" id="lead-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal">
+      <button class="modal__close modal-close" aria-label="Close modal">&times;</button>
+
+      <div class="modal__header">
+        <div class="modal__header-icon">&#128640;</div>
+        <h3 id="modal-title">Unlock Your Free Resource</h3>
+        <p>Get the Promotion Unicorn Report and start accelerating your career today.</p>
+      </div>
+
+      <div class="modal__body">
+        <form class="modal__form" aria-label="Download free resource">
+          <div class="form-group">
+            <label for="modal-name">First Name</label>
+            <input type="text" id="modal-name" name="name" class="form-input" placeholder="Your first name" required>
+          </div>
+          <div class="form-group">
+            <label for="modal-email">Email Address</label>
+            <input type="email" id="modal-email" name="email" class="form-input" placeholder="you@example.com" required>
+          </div>
+
+          <ul class="modal__benefits">
+            <li>Actionable strategies for career advancement</li>
+            <li>Proven frameworks from international leadership</li>
+            <li>Exclusive tips not found anywhere else</li>
+          </ul>
+
+          <button type="submit" class="btn btn--primary" style="width: 100%;">Send Me the Free Report</button>
+
+          <p class="modal__disclaimer">No spam, ever. Unsubscribe anytime.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

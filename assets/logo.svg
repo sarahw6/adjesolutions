@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="280" height="60">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Icon Mark: Abstract rising pathway / ascending arcs suggesting growth and leadership -->
+  <g transform="translate(8, 6)">
+    <!-- Three ascending bars forming a rising staircase — clean, geometric, modern -->
+    <!-- Bar 1 (shortest, left) -->
+    <rect x="0" y="28" width="8" height="20" rx="2" fill="#2F4F4F"/>
+    <!-- Bar 2 (medium, center) -->
+    <rect x="12" y="18" width="8" height="30" rx="2" fill="#2F4F4F"/>
+    <!-- Bar 3 (tallest, right) -->
+    <rect x="24" y="6" width="8" height="42" rx="2" fill="#2F4F4F"/>
+
+    <!-- Accent arc: a sweeping upward curve connecting the growth, burnt orange -->
+    <path d="M 2 30 Q 18 -4 34 10" stroke="#D96C3D" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+
+    <!-- Small diamond accent at the peak of the arc path — a subtle star/compass point -->
+    <polygon points="34,8 36.5,11 34,14 31.5,11" fill="#D96C3D"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g transform="translate(56, 0)">
+    <!-- "Adje" in deep green, elegant weight -->
+    <text x="0" y="32" font-family="'Cormorant Garamond', 'Georgia', 'Times New Roman', serif" font-size="28" font-weight="600" fill="#2F4F4F" letter-spacing="1.5">Adje</text>
+    <!-- "Solutions" in a lighter weight, slightly spaced -->
+    <text x="72" y="32" font-family="'Cormorant Garamond', 'Georgia', 'Times New Roman', serif" font-size="28" font-weight="500" fill="#2F4F4F" letter-spacing="1.5">Solutions</text>
+
+    <!-- Subtle accent underline beneath the full wordmark -->
+    <line x1="0" y1="40" x2="56" y2="40" stroke="#D96C3D" stroke-width="1.8" stroke-linecap="round"/>
+  </g>
+
+  <!-- Tagline area (optional thin line for visual grounding) -->
+  <line x1="56" y1="52" x2="264" y2="52" stroke="#2F4F4F" stroke-width="0.4" opacity="0.3"/>
+</svg>

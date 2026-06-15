@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Adje Solutions - Insights for International Professionals</title>
+  <meta name="description" content="The Adje Solutions Blog: executive coaching insights, Django parenting strategies, and faith-based inspiration for high achieving international professionals.">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Blog | Adje Solutions">
+  <meta property="og:description" content="Insights on executive coaching, parenting, and faith for high achieving international professionals.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.adjesolutions.com/blog.html">
+  <meta property="og:image" content="https://www.adjesolutions.com/assets/og-image.jpg">
+  <meta property="og:site_name" content="Adje Solutions">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+
+  <!-- Blog-specific styles -->
+  <style>
+    /* ---- Blog Card Full-Content Styles ---- */
+    .blog-card__full-content {
+      margin-top: var(--space-md);
+      line-height: var(--lh-relaxed);
+      color: var(--color-gray-500);
+      font-size: var(--fs-sm);
+    }
+    .blog-card__full-content p {
+      margin-bottom: var(--space-md);
+    }
+    .blog-card__full-content h4 {
+      font-family: var(--font-heading);
+      font-size: var(--fs-lg);
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-top: var(--space-xl);
+      margin-bottom: var(--space-sm);
+    }
+    .blog-card__full-content a {
+      color: var(--color-accent);
+      text-decoration: underline;
+    }
+    .blog-card__full-content a:hover {
+      color: var(--color-accent-hover);
+    }
+
+    /* Excerpt adjustments for full-content posts */
+    .blog-card__excerpt {
+      display: -webkit-box;
+      -webkit-line-clamp: unset;
+      -webkit-box-orient: vertical;
+      overflow: visible;
+    }
+    .blog-card__excerpt p {
+      margin: 0;
+      color: var(--color-gray-500);
+      line-height: var(--lh-normal);
+      font-size: var(--fs-sm);
+    }
+
+    /* Read More / Read Less button */
+    .blog-card__read-more {
+      display: inline-block;
+      margin-top: var(--space-md);
+      background: none;
+      border: none;
+      color: var(--color-accent);
+      font-weight: 600;
+      font-size: var(--fs-sm);
+      cursor: pointer;
+      padding: 0;
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+    .blog-card__read-more:hover {
+      color: var(--color-accent-hover);
+      text-decoration: underline;
+    }
+
+    /* Originally published note */
+    .blog-card__originally {
+      font-size: var(--fs-xs);
+      color: var(--color-gray-400);
+      margin-left: var(--space-md);
+    }
+    .blog-card__originally a {
+      color: var(--color-accent);
+      text-decoration: underline;
+    }
+
+    /* ---- Coming Soon Section ---- */
+    .blog-coming-soon {
+      padding: var(--space-3xl) 0 var(--space-xl);
+      border-top: 2px solid var(--color-gray-200);
+      margin-top: var(--space-xl);
+    }
+    .blog-coming-soon__heading {
+      font-family: var(--font-heading);
+      font-size: var(--fs-2xl);
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: var(--space-md);
+    }
+    .blog-coming-soon__description {
+      font-size: var(--fs-md);
+      color: var(--color-gray-500);
+      line-height: var(--lh-relaxed);
+      margin-bottom: var(--space-lg);
+      max-width: 800px;
+    }
+    .blog-coming-soon__label {
+      font-size: var(--fs-base);
+      color: var(--color-gray-500);
+      margin-bottom: var(--space-md);
+    }
+    .blog-coming-soon__list {
+      list-style: disc;
+      padding-left: var(--space-xl);
+      color: var(--color-gray-500);
+      line-height: var(--lh-relaxed);
+    }
+    .blog-coming-soon__list li {
+      margin-bottom: var(--space-sm);
+      font-size: var(--fs-base);
+    }
+
+    /* ---- Newsletter CTA (Blog page) ---- */
+    .blog-newsletter-cta {
+      padding: var(--space-5xl) 0;
+      background-color: var(--color-cream);
+    }
+    .blog-newsletter-cta__box {
+      background-color: var(--color-primary);
+      border-radius: var(--border-radius-xl);
+      padding: var(--space-3xl) var(--space-2xl);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(107, 196, 166, 0.2);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .blog-newsletter-cta__box:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 40px 100px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(242, 140, 40, 0.2);
+    }
+    .blog-newsletter-cta__box::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .blog-newsletter-cta__box::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -5%;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: rgba(217, 108, 61, 0.08);
+    }
+    .blog-newsletter-cta__content {
+      position: relative;
+      z-index: 1;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+    .blog-newsletter-cta__heading {
+      font-family: var(--font-heading);
+      font-size: var(--fs-3xl);
+      font-weight: 800;
+      color: var(--color-white);
+      margin-bottom: var(--space-lg);
+    }
+    .blog-newsletter-cta__description {
+      font-size: var(--fs-md);
+      color: #ffffff;
+      margin-bottom: var(--space-2xl);
+      line-height: var(--lh-relaxed);
+      font-weight: 400;
+    }
+    .blog-newsletter-cta__form {
+      display: flex;
+      gap: var(--space-sm);
+      max-width: 460px;
+      margin: 0 auto;
+    }
+    .blog-newsletter-cta__form-group {
+      display: flex;
+      gap: var(--space-sm);
+      width: 100%;
+    }
+    .blog-newsletter-cta__input {
+      flex: 1;
+      padding: 14px 20px;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      border-radius: var(--border-radius-pill);
+      background-color: rgba(255, 255, 255, 0.3);
+      color: var(--color-white);
+      font-size: var(--fs-base);
+      transition: border-color var(--transition-fast), background-color var(--transition-fast);
+      outline: none;
+    }
+    .blog-newsletter-cta__input::placeholder {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    .blog-newsletter-cta__input:focus {
+      border-color: var(--color-accent);
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+    .blog-newsletter-cta__disclaimer {
+      font-size: var(--fs-xs);
+      color: rgba(255, 255, 255, 1);
+      margin-top: var(--space-md);
+      text-align: center;
+    }
+
+    /* Responsive: stack form on small screens */
+    @media (max-width: 600px) {
+      .blog-newsletter-cta__form-group {
+        flex-direction: column;
+      }
+      .blog-newsletter-cta__heading {
+        font-size: var(--fs-2xl);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Skip to content (accessibility) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ============================================================
+       TOP NEWSLETTER BAR
+       ============================================================ -->
+  <div class="newsletter-bar" role="banner">
+    <div class="container">
+      <p class="newsletter-bar__text">
+        <strong>Free Resource:</strong> Download the Promotion Unicorn Report
+      </p>
+      <a href="#lead-modal" class="newsletter-bar__link">Get It Now</a>
+      <button class="newsletter-bar__close" aria-label="Close newsletter bar">&times;</button>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       HEADER & NAVIGATION
+       ============================================================ -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="header__logo">
+        <img src="assets/logo.svg" alt="Adje Solutions" width="180" height="44">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="about.html" class="nav__link">About</a></li>
+          <li class="nav__item--dropdown">
+            <a href="#" class="nav__link" aria-haspopup="true" aria-expanded="false">Services</a>
+            <ul class="nav__dropdown" role="menu">
+              <li><a href="coaching.html" class="nav__dropdown-link" role="menuitem">1:1 Coaching</a></li>
+              <li><a href="group-coaching.html" class="nav__dropdown-link" role="menuitem">Group Coaching</a></li>
+              <li><a href="doula.html" class="nav__dropdown-link" role="menuitem">Career Doula</a></li>
+              <li><a href="parenting.html" class="nav__dropdown-link" role="menuitem">Parenting Support</a></li>
+            </ul>
+          </li>
+          <li><a href="blog.html" class="nav__link is-active">Blog</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn--primary btn--sm nav__cta">Book a Call</a>
+      </nav>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav" aria-hidden="true">
+    <ul class="mobile-nav__list">
+      <li><a href="index.html" class="mobile-nav__link">Home</a></li>
+      <li><a href="about.html" class="mobile-nav__link">About</a></li>
+      <li><a href="coaching.html" class="mobile-nav__link">1:1 Coaching</a></li>
+      <li><a href="group-coaching.html" class="mobile-nav__link">Group Coaching</a></li>
+      <li><a href="doula.html" class="mobile-nav__link">Career Doula</a></li>
+      <li><a href="parenting.html" class="mobile-nav__link">Parenting Support</a></li>
+      <li><a href="blog.html" class="mobile-nav__link is-active">Blog</a></li>
+      <li><a href="contact.html" class="mobile-nav__link">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn--primary mobile-nav__cta">Book a Call</a>
+  </div>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main id="main-content">
+
+    <!-- ---- Blog Hero ---- -->
+    <section class="blog-hero page-hero">
+      <div class="container">
+        <h1 class="fade-in">The Adje Solutions Blog</h1>
+        <p class="fade-in">For high achieving international professionals who want to climb the ladder without compromising their personal priorities.</p>
+      </div>
+    </section>
+
+    <!-- ---- Category Tabs ---- -->
+    <section class="fade-in">
+      <div class="container">
+        <div class="blog-tabs" role="tablist" aria-label="Blog categories">
+          <button class="blog-tab is-active" data-category="all" role="tab" aria-selected="true">All</button>
+          <button class="blog-tab" data-category="coaching" role="tab" aria-selected="false">Executive Coaching Corner</button>
+          <button class="blog-tab" data-category="parenting" role="tab" aria-selected="false">Django Parenting for Resilience</button>
+          <button class="blog-tab" data-category="faith" role="tab" aria-selected="false">A Bit of Faith and Inspiration</button>
+        </div>
+
+        <!-- ---- Blog Post Grid ---- -->
+        <div class="blog-grid" role="tabpanel">
+
+          <!-- ======== Post 1: Executive Coaching Corner ======== -->
+          <article class="blog-card blog-post" data-category="coaching" data-expanded="false">
+            <div class="blog-card__body">
+              <span class="blog-card__category">Executive Coaching Corner</span>
+              <h3 class="blog-card__title">My Work-Life Balance Manifesto: The 3Cs Approach to Living Your Purpose</h3>
+              <div class="blog-card__meta">
+                <time datetime="2026-06-15">June 15, 2026</time>
+              </div>
+
+              <!-- Excerpt (always visible) -->
+              <div class="blog-card__excerpt">
+                <p>Are we allowed to talk about work-life balance anymore? With the latest return to work policies, AI taking over jobs, and job searchers facing the worst job market EVER, can I still advocate for work-life balance for myself and my team? Maybe the question isn't can I, but should I?</p>
+              </div>
+
+              <!-- Full content (hidden by default) -->
+              <div class="blog-card__full-content" style="display:none;">
+                <p>When I published <a href="https://www.amazon.com/DIPLOMATICALLY-Creating-Work-Life-Balance-Foreign-ebook/dp/B0CN52ZV9L" target="_blank" rel="noopener noreferrer"><em>DIPLOMATICALLY: A Guide for Creating Work-life Balance in the Foreign Service</em></a> (purchase on Amazon <a href="https://www.amazon.com/DIPLOMATICALLY-Creating-Work-Life-Balance-Foreign-ebook/dp/B0CN52ZV9L" target="_blank" rel="noopener noreferrer">here</a>) in 2023 it was a different world. We were all coming back to work from COVID, workers realized how wonderful it was to have flexible working arrangements and organizations were happily surprised to learn they could operate remotely. COVID proved that we could do it and everyone hoped this would usher in a new era of workplace flexibilities that would lead to greater work-life balance overall. And then 2025 happened: unprecedented job cuts, whole sectors of work disappearing, welcome to the job market from hell.</p>
+
+                <p>Despite this, I continue to believe that true success is marrying your personal priorities with your job and making it all work together so you can live out your purpose. If you don't keep your top priorities at the forefront, no one else will; if you don't advocate for them, someone else will set them for you. This hasn't changed. I still want to move up the professional ladder, but much like before, I refuse to do it in a way that compromises my active role as a wife and mother to five children. And thus, my answer is yes, I will continue to advocate for work-life balance.</p>
+
+                <p>With a caveat. We all need to up our game and be even more strategic now than ever before when trying to negotiate for work-life balance. I welcome you to apply my 3Cs Approach&trade; (Connection, Communication, and Courage) for achieving your personal priorities in your workplace.</p>
+
+                <h4>1. Connection: Build Your Allies</h4>
+                <p>In a massive company or organization, you cannot make change happen alone. You must invest in relationships and build strong alliances so you have allies for your cause. This means going beyond superficial pleasantries to find a unique connection with the people you work with from the senior leadership to the office supply manager. When people connect with you as a human being, they are more likely to support your agenda and grant you the grace you need when you set boundaries.</p>
+
+                <h4>2. Communication: Keep it Strategic</h4>
+                <p>To get your time back, you must work smarter and achieve results faster. People who simply cut back on work get labeled as lazy. You actually need to accomplish more in your 8 hour work day than others to get some time back for yourself. To start, fine tune the way you speak. There are a million ways to deliver a message and you must choose the way that your listener will hear you best. In difficult conversations, keep it short and stick to the facts to avoid emotional landmines. Advocate for yourself and your objective in every interaction.</p>
+
+                <h4>3. Courage: Show Up Intentionally</h4>
+                <p>You must have the courage to show up at work with your priorities taking center stage. This means setting clear boundaries and sticking to those. Sometimes you state your priorities out loud, but it's not always necessary. Most of the time, your actions will speak louder than words and people will observe and adapt to you. If you are starting a new position, remember to start the way you want to finish.</p>
+
+                <h4>The Bottom Line</h4>
+                <p>I'm going to quote myself from my first book (at the risk of tooting my own horn), "If you ruin your health and die tomorrow, your organization is going to replace you with someone younger and cheaper." But your loved ones only get one shot, they only have one of you. True or false?</p>
+
+                <p>Single, married, with kids, no kids -- stop asking for permission to have a life. Be courageous, work with intention, and let your actions speak for themselves. "Du courage" as we like to say in French in Francophone Africa, be courageous! It's the equivalent of the American "you got this!"</p>
+              </div>
+
+              <button class="blog-card__read-more btn--link" onclick="toggleBlogPost(this)">Read More</button>
+            </div>
+          </article>
+
+          <!-- ======== Post 2: Django Parenting for Resilience ======== -->
+          <article class="blog-card blog-post" data-category="parenting" data-expanded="false">
+            <div class="blog-card__body">
+              <span class="blog-card__category">Django Parenting for Resilience</span>
+              <h3 class="blog-card__title">Django Parenting: Tough Love Prepares Children Better for an Unpredictable World</h3>
+              <div class="blog-card__meta">
+                <time datetime="2026-06-15">June 15, 2026</time>
+              </div>
+
+              <!-- Excerpt (always visible) -->
+              <div class="blog-card__excerpt">
+                <p>In a world defined by shifting global politics, rapid technological advancement, and economic whiplash, every parent is haunted by the same question: How do I prepare my children for a future I can't even predict? We live in an era where modern parenting norms often prioritize immediate happiness and individual comfort. Yet, as a mother of five multicultural third-culture children who has lived and worked across West, Central, and East Africa for nearly two decades, I've seen a different reality. Children are taught to be resilient from their parents and community members through intentional discipline.</p>
+              </div>
+
+              <!-- Full content (hidden by default) -->
+              <div class="blog-card__full-content" style="display:none;">
+                <p>This is why my husband, Eusebe "Adje" Adje, and I advocate for what we call Django Parenting&trade;. Named after Adje's childhood nickname "Django" meaning "the wild one," this approach bridges the gap between modern expectations and the generational "tough love" wisdom of Benin (a country in West Africa where Adje is from). It is a philosophy that transformed a rebellious boy into a disciplined man of faith, and it has helped our family remain resilient after all these years through countless moves, and even when we had to flee political violence in the middle of the night across international borders.</p>
+
+                <h4>Why Django Parenting is Necessary Today</h4>
+                <p>Modern society often avoids discomfort and it is seen as a failure of parenting. In contrast, Django Parenting views intentional discomfort as a gift. We believe that if you do not educate your children to confront and navigate hardships now, the world will do it for them and the consequences are far harsher. Our approach is built on 23 Django Parenting for Resilience Principles&trade; designed to raise self-sufficient, disciplined, service-oriented, and joyful adults. Here are a few of the principles that parents can start applying today:</p>
+
+                <p><strong>Intentional Discomfort:</strong> By letting a child "pick themselves up" after a fall, literally and metaphorically, we teach them the muscle of self-recovery.</p>
+
+                <p><strong>Teaching Obedience Early:</strong> Assigning responsibilities to children from a very young age, including toddlers, ensures that listening to parental authority becomes their default setting, and parents can continue to guide and protect their children as they get older.</p>
+
+                <p><strong>The Antidote to Boredom:</strong> When we refuse to be our child's "vehicle for constant happiness," we spark their independent creativity and promote emotional self-regulation.</p>
+
+                <p><strong>Identity Over Approval:</strong> We train our children to be "comfortable being different," strengthening their internal values so they can stand firm against peer pressure in any culture or country.</p>
+
+                <h4>Choosing a New Storyline</h4>
+                <p>Parenting is a choose-your-own-adventure game. Most of us are handed one storyline based on our own upbringing and told to follow it. But what if there is a more effective path for the world your children are actually entering? I invite you to explore Django Parenting.</p>
+
+                <p>Are you ready for the straight talk you aren't getting from your parenting group?</p>
+
+                <p>Order your copy of <a href="https://www.amazon.com/dp/B0H59K9XMZ" target="_blank" rel="noopener noreferrer"><em>DIPLOMATICALLY 2: Django Parenting, A Guide for Raising Resilient Third-culture Children</em></a> (purchase on Amazon <a href="https://www.amazon.com/dp/B0H59K9XMZ" target="_blank" rel="noopener noreferrer">here</a>) today and discover how to build a resilient family prepared for an ever-changing world.</p>
+              </div>
+
+              <button class="blog-card__read-more btn--link" onclick="toggleBlogPost(this)">Read More</button>
+            </div>
+          </article>
+
+          <!-- ======== Post 3: A Bit of Faith and Inspiration ======== -->
+          <article class="blog-card blog-post" data-category="faith" data-expanded="false">
+            <div class="blog-card__body">
+              <span class="blog-card__category">A Bit of Faith and Inspiration</span>
+              <h3 class="blog-card__title">Counting the Blessings: After Fleeing Political Violence in the Democratic Republic of the Congo to Face the Closure of USAID - I Am Still Grateful</h3>
+              <div class="blog-card__meta">
+                <time datetime="2025-08-05">August 5, 2025</time>
+                <span class="blog-card__originally">Originally published on <a href="https://www.linkedin.com/pulse/counting-blessings-after-fleeing-political-violence-democratic-adje-os29e/" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+              </div>
+
+              <!-- Excerpt (always visible) -->
+              <div class="blog-card__excerpt">
+                <p>2025. What a year it has been. No one could have predicted all that has happened in the last six months. Even if you told me ahead of time I wouldn't have believed you.</p>
+              </div>
+
+              <!-- Full content (hidden by default) -->
+              <div class="blog-card__full-content" style="display:none;">
+                <p>In January, while serving as a Foreign Service Officer with the United States Agency for International Development (USAID) in the Democratic Republic of the Congo (DRC), I fled with my family of 7 in the middle of the night from the DRC due to political violence. We left by boat with one backpack each to a neighboring country. While I was supposed to report for work in Washington, DC, I pleaded with senior officials to allow me to go to Benin (a little country in West Africa) instead, where my husband is from. We have no family or house in DC, it was the middle of winter, my children go to the French international school and are not familiar with the American school system, it was easier to go to Benin than the United States for so many reasons. And there I started to count my blessings:</p>
+
+                <h4>Blessing #1</h4>
+                <p>When we arrived in Benin we were greeted by our old nanny who was there when my first 2 children were born and had helped me to raise them. Had we gone to the US my husband would have turned into an instant stay at home dad. Not his career of choice.</p>
+
+                <h4>Blessing #2</h4>
+                <p>Upon arriving in Benin is when the DOGE accusations started against USAID and I realized I could be put on leave imminently and face job loss. We immediately moved into our family home we had been building for years, it was an active construction site, but we were grateful to have a roof over our heads. Our family of 7 squeezed into a 2 bedroom with no AC, no hot water, and regular electricity outages. I jokingly told family and friends that we were living the "Peace Corps" life and not the diplomat life anymore.</p>
+
+                <h4>Blessing #3</h4>
+                <p>My children who have grown up in the Foreign Service for the first time experienced what it is like to live like their African cousins and friends. They slept on the floor, walked to school (no more car or driver in Benin like we had in DRC), stayed mostly at home, and ate mainly African food because I wanted to cut down on costs so no more eating out at restaurants or buying treats (ie. junk food). My husband and I believe that putting our children through some hardship is not a bad thing and better prepares them for life with all of its ups and downs. Without the sudden change in our own circumstance, I don't think my husband and I would have been creative enough to manufacture the living conditions we experienced over the past 6 months that I believe have made our children stronger.</p>
+
+                <h4>Blessing #4</h4>
+                <p>My children are mixed race (Asian and African) and we sent them to a Benin public school. That was an adjustment for them. My youngest son who is 4 would imitate the way all his classmates in his preschool class stared at him. He would open his eyes so they bulged out, stick out his neck as far as it could go, and then freeze. He looked like a turtle coming out of a shell. Cracked me up every time! The children had to quickly get comfortable in their own skin, adapt to their newfound celebrity status, and learn to be ok being different. Kids in general want to fit in so badly and not be different in any way from their peers. My kids got a crash course in developing confidence and a thicker skin - quickly.</p>
+
+                <h4>Blessing #5</h4>
+                <p>I had more time to practice coaching. With the influx of job seekers into the market and so many experiencing a career transition being a certified Executive Coach helped me to help others. I leaned into my passion for helping people. It required a lot of work logistically though. To set up for a coaching session: I had to tell the construction workers to stop banging for 1 hour, I set up my computer on plastic chairs (we had no furniture), I bought a desk lamp that I shined into my own face so the person I was talking to could see me because our house was dark, I rearranged the children's nap schedules and locations so I had a quiet place to talk (remember 7 people in 2 bedrooms?), and I had to have my computer and phone fully charged the day before in case there was an electricity outage the day of. All this for 1 coaching session. There was one time when the electricity did cut out and I had to coach while sitting on the toilet because the bathroom was unfinished and the only place in the entire house that had natural light. I had a special companion too for that session, a pesky fly that kept buzzing around and landing on my face throughout the entire call. Fun times! When I complained about these logistical challenges to my husband he reminded me that one day when I have "made it" I will look back at these humble beginnings and have a deeper appreciation for how far I have come. I do not doubt this and am chuckling now even as I write.</p>
+
+                <h4>Blessing #6</h4>
+                <p>I am grateful for my faith. Knowing that Jesus had a plan for me and my family helped take the burden off me as the sole breadwinner for our family of 7. My husband's employment depends on mine. This is how it works for Eligible Family Member appointments in the US government. Once I departed Congo my husband had to submit his resignation letter. While I worried about our future like any rational person in the same situation, I never panicked or lost sleep over it. I trusted that if Jesus is taking USAID away then something better awaits. The bible says (Romans 8:28), "And we know in all things God works for the good of those who love him..." I am grateful for the "peace of God, which transcends all understanding" (Philippians 4:7) that I have had during this tumultuous period. A peace I cannot explain or justify but felt deeply.</p>
+
+                <p>It seems like everywhere I turn I see people struggling RIGHT NOW. I share my list of blessings in hopes it will help someone else to see the silver lining in their situation and start counting their blessings too. According to Emmons and McCullough (2003) study, people who wrote down 3-5 things they were grateful for weekly for 10 weeks reported 25% increased happiness, fewer depressive symptoms, and better sleep and physical health. I want this for you and everyone who reads this article. If you are job searching, remember, you only need 1 organization or company to say "yes" to you. It's a minority of people who stay unemployed forever. Most people will find jobs and it's only a matter of time. Until then, stay positive, and keep counting your blessings!</p>
+
+                <p>A little about me: I'm a wife, mother, author, diplomat, coach, and believer doing my best to walk by faith -- not by fear -- while raising five kids and building a life across continents. If you're going through a season of change, I hope this encouraged you to keep trusting and keep going. If this resonated with you, I'd love to connect.</p>
+              </div>
+
+              <button class="blog-card__read-more btn--link" onclick="toggleBlogPost(this)">Read More</button>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- ---- Coming Soon Section ---- -->
+        <div class="blog-coming-soon">
+          <h2 class="blog-coming-soon__heading">More Articles Coming Soon</h2>
+          <p class="blog-coming-soon__description">Stay tuned for more insights on leadership, career advancement, parenting strategies, and faith-based inspiration for high achieving international professionals navigating work and life.</p>
+          <p class="blog-coming-soon__label"><strong>Upcoming articles will include:</strong></p>
+          <ul class="blog-coming-soon__list">
+            <li>The 3Cs That Changed My Career: Connection, Communication, and Courage</li>
+            <li>How to Navigate a Career Transition Without Losing Your Mind</li>
+            <li>Negotiation Secrets from a Billion-Dollar Portfolio Manager</li>
+            <li>What Django Parenting Taught Me About Raising Resilient Kids</li>
+            <li>Third-Culture Children: Challenges and Hidden Superpowers</li>
+            <li>Preparing Your Children for a Future You Can't Predict</li>
+            <li>Finding Balance When the World Feels Upside Down</li>
+            <li>How Faith Anchored Me Through 14 Countries and 5 Kids</li>
+            <li>The Power of Showing Up: Leadership Lessons from Motherhood</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---- Newsletter CTA Section ---- -->
+    <section class="blog-newsletter-cta fade-in" id="blog-newsletter">
+      <div class="container">
+        <div class="blog-newsletter-cta__box">
+          <div class="blog-newsletter-cta__content">
+            <h2 class="blog-newsletter-cta__heading">Subscribe to the Adje Solutions Newsletter</h2>
+            <p class="blog-newsletter-cta__description">Get actionable insights on leadership, career growth, and parenting delivered straight to your inbox. Join a community of high achieving international professionals who are committed to excelling at work and life.</p>
+            <form class="blog-newsletter-cta__form newsletter-form" id="blogNewsletterForm">
+              <div class="blog-newsletter-cta__form-group">
+                <label for="blogNewsletterEmail" class="visually-hidden">Email address</label>
+                <input type="email" id="blogNewsletterEmail" name="email" placeholder="Enter your email address" required class="blog-newsletter-cta__input">
+                <button type="submit" class="btn btn--primary blog-newsletter-cta__submit">Subscribe</button>
+              </div>
+              <p class="blog-newsletter-cta__disclaimer">We respect your privacy. Unsubscribe at any time.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Brand Column -->
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">Adje <span>Solutions</span></a>
+          <p>Helping international professionals succeed at work and life.</p>
+          <div class="footer__social">
+            <a href="https://www.linkedin.com/in/yikeeadje/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/adjesolutions/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div class="footer__column">
+          <h4>Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="about.html">About Yikee</a></li>
+            <li><a href="coaching.html">1:1 Coaching</a></li>
+            <li><a href="group-coaching.html">Group Coaching</a></li>
+            <li><a href="doula.html">Career Doula</a></li>
+            <li><a href="parenting.html">Parenting Support</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources Column -->
+        <div class="footer__column">
+          <h4>Resources</h4>
+          <ul class="footer__links">
+            <li><a href="blog.html">Leadership Insights</a></li>
+            <li><a href="https://www.amazon.com/DIPLOMATICALLY-Creating-Work-Life-Balance-Foreign-ebook/dp/B0CN52ZV9L" target="_blank" rel="noopener noreferrer">DIPLOMATICALLY (Book)</a></li>
+            <li><a href="#lead-modal">Free Download</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Column -->
+        <div class="footer__newsletter">
+          <h4>Stay Connected</h4>
+          <p>Join the newsletter for leadership tips, career strategies, and updates.</p>
+          <form class="footer__newsletter-form newsletter-form" action="#" method="POST">
+            <input type="email" class="footer__newsletter-input" placeholder="Your email address" aria-label="Email for newsletter" required>
+            <button type="submit" class="btn btn--primary btn--sm">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer__bottom">
+        <p>&copy; 2025 Adje Solutions. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       LEAD MAGNET MODAL
+       ============================================================ -->
+  <div class="modal-overlay lead-modal" id="lead-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal">
+      <button class="modal__close modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal__header">
+        <div class="modal__header-icon">&#128640;</div>
+        <h3 id="modal-title">Unlock Your Leadership Potential</h3>
+        <p>Download the free Promotion Unicorn Report and discover strategies to advance your career.</p>
+      </div>
+      <div class="modal__body">
+        <form class="modal__form newsletter-form" action="#" method="POST">
+          <div class="form-group">
+            <input type="email" class="form-input" placeholder="Enter your email address" aria-label="Email address" required>
+          </div>
+          <button type="submit" class="btn btn--primary" style="width: 100%;">Send Me the Report</button>
+          <ul class="modal__benefits">
+            <li>Actionable strategies for career advancement</li>
+            <li>Insights from nearly two decades of international experience</li>
+          </ul>
+          <p class="modal__disclaimer">No spam, ever. Unsubscribe anytime.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog post expand/collapse functionality -->
+  <script>
+    function toggleBlogPost(button) {
+      var card = button.closest('.blog-card');
+      var fullContent = card.querySelector('.blog-card__full-content');
+      var isExpanded = card.getAttribute('data-expanded') === 'true';
+
+      if (isExpanded) {
+        fullContent.style.display = 'none';
+        card.setAttribute('data-expanded', 'false');
+        button.textContent = 'Read More';
+        // Scroll back to the top of the card
+        card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        fullContent.style.display = 'block';
+        card.setAttribute('data-expanded', 'true');
+        button.textContent = 'Read Less';
+      }
+    }
+  </script>
+</body>
+</html>
