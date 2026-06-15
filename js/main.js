@@ -404,7 +404,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 7. SCROLL ANIMATIONS (Intersection Observer)
   // =========================================================================
 
-  const fadeElements = document.querySelectorAll(".fade-in");
+  const fadeElements = document.querySelectorAll(".fade-in, .fade-in-left, .fade-in-right, .fade-in-up");
 
   if (fadeElements.length > 0 && "IntersectionObserver" in window) {
     const observerOptions = {

@@ -239,6 +239,14 @@ p:last-child {
   border-color: var(--color-accent);
 }
 
+.section--dark .service-card h4 {
+  color: var(--color-primary);
+}
+
+.section--dark .service-card p {
+  color: var(--color-gray-600);
+}
+
 .section-header {
   text-align: center;
   max-width: 680px;
